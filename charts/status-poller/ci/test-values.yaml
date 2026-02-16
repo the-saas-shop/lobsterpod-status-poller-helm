@@ -1,0 +1,13 @@
+secret:
+  SOME_API_KEY: "test-key-for-ci"
+
+env:
+  LOG_LEVEL: "debug"
+
+resources:
+  requests:
+    cpu: 50m
+    memory: 64Mi
+  limits:
+    cpu: 100m
+    memory: 128Mi

@@ -1,0 +1,10 @@
+Status Poller has been deployed.
+
+Release: {{ .Release.Name }}
+Image:   {{ .Values.image.repository }}:{{ .Values.image.tag }}
+
+Check the deployment status:
+  kubectl get deployment {{ include "status-poller.fullname" . }} -n {{ .Release.Namespace }}
+
+View logs:
+  kubectl logs -l app.kubernetes.io/name={{ include "status-poller.name" . }},app.kubernetes.io/instance={{ .Release.Name }} -n {{ .Release.Namespace }} -f

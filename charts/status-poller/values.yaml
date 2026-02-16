@@ -1,0 +1,60 @@
+image:
+  repository: 
+  tag: ""
+  pullPolicy: IfNotPresent
+
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
+
+# -- Use an existing secret instead of creating one.
+# The secret must contain the keys referenced in env below.
+existingSecret: ""
+
+# -- Secret values (only used when existingSecret is empty)
+secret:
+  {}
+  # SOME_API_KEY: ""
+  # DATABASE_URL: ""
+
+# -- Extra environment variables (plain, non-secret)
+env:
+  {}
+  # LOG_LEVEL: "info"
+
+replicaCount: 1
+
+serviceAccount:
+  create: true
+  annotations: {}
+  name: ""
+
+podAnnotations: {}
+podLabels: {}
+
+podSecurityContext:
+  runAsNonRoot: true
+  runAsUser: 1000
+  runAsGroup: 1000
+  fsGroup: 1000
+  seccompProfile:
+    type: RuntimeDefault
+
+securityContext:
+  allowPrivilegeEscalation: false
+  readOnlyRootFilesystem: true
+  capabilities:
+    drop:
+      - ALL
+
+resources:
+  requests:
+    cpu: 50m
+    memory: 64Mi
+  limits:
+    cpu: 200m
+    memory: 128Mi
+
+nodeSelector: {}
+tolerations: []
+affinity: {}
