@@ -1,0 +1,16 @@
+apiVersion: v1
+entries:
+  status-poller:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2026-02-16T15:43:19.093485974Z"
+    description: A Helm chart for the Lobsterpod Status Poller
+    digest: d050e335eecb14d5bfd4a691693ce9f3ba34415f731b60cb369f4c29ca457727
+    maintainers:
+    - name: the-saas-shop
+    name: status-poller
+    type: application
+    urls:
+    - https://github.com/the-saas-shop/lobsterpod-status-poller-helm/releases/download/status-poller-0.1.1/status-poller-0.1.1.tgz
+    version: 0.1.1
+generated: "2026-02-16T15:43:19.093492216Z"
